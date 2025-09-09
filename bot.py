@@ -16,7 +16,7 @@ def send_welcome(message):
 
 @bot.message_handler(commands=['help']) #хелп
 def send_help(message):
-    bot.reply_to(message, "/set -таймер \n /unset - выкоючить таймер \n /heh - пишет hehe \n /poll - квиз \n /random - рандомайзер чисел, напиши диапазон через пробел \n /plus, /minus, /divide, /multi - калькулятор напиши 2 числа через пробел и бот сложит/вычтет/разделит/умножит эти 2 числа \n /round - округлит число, напиши дробь и через пробел скольо чисел должно остаться после запитой \n /game - простая игра напиши от одного до пяти чтобы угадать где монета \n /balance - твой баланс ")
+    bot.reply_to(message, "/set -таймер \n /unset - выключить таймер \n /heh - пишет hehe \n /poll - квиз \n /random - рандомайзер чисел, напиши диапазон через пробел \n /plus, /minus, /divide, /multi - калькулятор напиши 2 числа через пробел и бот сложит/вычтет/разделит/умножит эти 2 числа \n /round - округлит число, напиши дробь и через пробел скольо чисел должно остаться после запитой \n /game - простая игра напиши от одного до пяти чтобы угадать где монета \n /balance - твой баланс ")
 
 def beep(chat_id) -> None:
     """Send the beep message."""
@@ -106,7 +106,7 @@ def send_game(message):
         bot.reply_to(message, "молодец, ты угадал")
         balance += 1
     else:
-        bot.reply_to(message, "увы, но ты проиграл :(")
+        bot.reply_to(message, "увы, ты проиграл :(")
 
 @bot.message_handler(commands=['balance']) #баланс
 def send_balance(message):
